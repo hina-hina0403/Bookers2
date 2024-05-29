@@ -1,5 +1,39 @@
-<h2>Title</h2>
-<p><%= @book.title %></p>
+<h1>User info</h1>
+<%=image_tag @user.get_profile_image(100,100) %>
 
-<h2>Opinion</h2>
-<p><%= @book.body %></p>
+<%=@user.name %>
+
+<%=@user.introduction %>
+
+<%=link_to edit_user_path(@user.id) do %>
+
+<i class ="fas fa-user-cog" ></i>
+
+<% end %>
+
+
+<h1>Book detail</h1>
+<table>
+  <tr>
+    <td>
+      <%= link_to user_path(@book.user.id) do %>
+      <%= image_tag @book.user.get_profile_image(100,100) %>
+      <% end %>
+    </td>
+    <td>
+      <%= link_to book_path(@book.id) do %>
+      <%= @book.title %>
+      <% end %>
+    </td>
+    <td>
+      <%= @book.body %>
+    </td>
+    <td>
+      <% = link_to edit_book_path(@book.id.edit) do %>
+    </td>
+    <td>
+      
+    </td>
+  </tr>
+</table>
+
