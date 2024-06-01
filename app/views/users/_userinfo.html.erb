@@ -1,9 +1,27 @@
 <h1>User info</h1>
 <%=image_tag user.get_profile_image(100,100) %>
 
-<%=user.name %>
+<table>
+  <tr>
+    <th>
+      name
+    </th>
+    <th>
+      <%=user.name %>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      introduction
+    </th>
+    <th>
+      <%=user.introduction %>
+    </th>
+  </tr>
+</table>
 
-<%=user.introduction %>
+
+
 
 <%=link_to edit_user_path(user.id) do %>
 
