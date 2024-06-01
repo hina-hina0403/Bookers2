@@ -5,11 +5,10 @@
 
 <%=@user.introduction %>
 
-<%=link_to edit_user_path(@user.id) do %>
-
+<%=if @user == current_user link_to edit_user_path(@user.id) do %>
 <i class ="fas fa-user-cog" ></i>
-
 <% end %>
+
 
 
 <h1>Book detail</h1>
