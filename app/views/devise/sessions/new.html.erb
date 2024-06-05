@@ -1,4 +1,10 @@
-<h2>Log in</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
+      <h2>Log in</h2>
+      <form action="/users/sign_in" accept-charset="UTF-8" method="post">
+
+
 
 
 
@@ -23,8 +29,13 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "btn btn-sm btn-primary" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+      </form>
+    </div>
+  </div>
+</div>
