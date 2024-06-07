@@ -1,14 +1,21 @@
 <%= render 'users/userinfo', user: @user %>
 <%= render 'books/newbook', book: @book %>
 
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
 
+<div class="col-md-8 offset-md-1">
 <h1>Books</h1>
-<table>
-  <tr>
-    <th></th>
-    <th>Title</th>
-    <th>Opinion</th>
-  </tr>
+<table class="table table-hover table-inverse">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinion</th>
+    </tr>
+  </thead>
+
   <% @books.each do |book| %>
   <tr>
     <td>
@@ -25,3 +32,8 @@
   </tr>
   <% end %>
 </table>
+</div>
+
+   </div>
+  </div>
+</div>

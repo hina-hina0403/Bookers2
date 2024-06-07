@@ -1,13 +1,23 @@
 <%= render 'users/userinfo', user: @user %>
 <%= render 'books/newbook', book: @book %>
 
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
+      <h2>Users</h2>
+    
 
-<h1>Users</h1>
-<table>
-  <tr>
-    <th>image</th>
-    <th>name</th>
-  </tr>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
   <% @users.each do |user| %>
   <tr>
     <td>
@@ -21,4 +31,8 @@
     </td>
   </tr>
   <% end %>
+  </tbody>
 </table>
+    </div>
+  </div>
+</div>
