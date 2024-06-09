@@ -26,7 +26,7 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     unless @user.id == current_user.id
       redirect_to user_path(current_user.id)
     end
@@ -40,6 +40,7 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
+    @user = User.find(@book.user_id)
     unless @user.id == current_user.id
       redirect_to user_path(current_user.id)
     end
